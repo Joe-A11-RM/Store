@@ -1,0 +1,32 @@
+<img id="banner" src="https://img.freepik.com/premium-vector/hand-drawn-illustration-people-shopping-sale_52683-55420.jpg?w=2000" class="d-block w-100" alt="..." height="400">
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="tickeritem">
+            Flash sale up to 50%!!
+        </div>
+        <div class="tickeritem">
+            Flash sale up to 50%!!
+        </div>
+        <div class="tickeritem">
+            Flash sale up to 50%!!
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <app-product-item *ngFor="let i of columndata" [column]="i" class="col-lg-2"></app-product-item>
+        <blockquote id="items" class="col-lg-10">
+            <p id="title">Top rated items</p>
+            <div class="row">
+                <blockquote *ngFor="let  i of product" class="col-lg-4">
+                    <img id="img-container" src="{{i.url}}" alt="" width="200" height="250">
+                    <p id="details">{{i.name}}</p>
+                    <p id="price">${{i.price}}</p>
+                    <a routerLink="details/{{i.id}}"> <button class="btn btn-primary">More Details</button></a>
+                </blockquote>
+            </div>
+        </blockquote>
+    </div>
+</div>

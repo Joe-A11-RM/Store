@@ -1,0 +1,70 @@
+#banner {
+    border-bottom: 3px black solid;
+}
+
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    height: 3rem;
+    box-sizing: content-box;
+    border-bottom: 3px solid black;
+    background-color: orange;
+}
+
+.ticker {
+    display: inline-flex;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 40s;
+}
+
+.tickeritem {
+    margin-right: 400px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+}
+
+@keyframes ticker {
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+    0% {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+blockquote {
+    text-align: center;
+}
+
+#items {
+    background-color: white;
+}
+
+#title {
+    margin-top: 15px;
+    font-size: 1.6em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+#img-container {
+    border: 2px solid rgb(163, 163, 219);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#details {
+    height: 1em;
+}
+
+#price {
+    font-weight: bold;
+    height: 1em;
+}

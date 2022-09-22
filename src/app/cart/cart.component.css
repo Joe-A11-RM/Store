@@ -1,0 +1,40 @@
+#emptycard {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 170px;
+}
+
+h1 {
+    margin-bottom: 55px;
+}
+
+#items {
+    margin-top: 15px;
+}
+
+#name {
+    font-weight: bold;
+}
+
+img {
+    border: 2px solid rgb(163, 163, 219);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#Total {
+    font-weight: bold;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input {
+    margin-right: 150px;
+    margin-bottom: 15px;
+}

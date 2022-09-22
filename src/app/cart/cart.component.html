@@ -1,0 +1,47 @@
+<ng-container *ngIf="product.length!=0">
+    <div id="items" *ngFor="let item of product, let i = index">
+        <div class="container">
+            <div class="row">
+                <blockquote class="col-lg-4">
+                    <img src="{{item.url}}" alt="" width="100" height="150">
+                </blockquote>
+                <blockquote class="col-lg-4">
+                    <p id="name">{{item.name}}</p>
+                    <p>${{item.price}}</p>
+                    <label for="quantity">Amount:
+                    <input type="number" id="quantity" name="quantity" min="1" max="10">
+                  </label>
+                    <button (click)="removeProduct(item)" type="button" class="btn btn-danger">Delete</button>
+                </blockquote>
+                <blockquote class="col-lg-4">
+                    <form #form="ngForm" (ngSubmit)="submitForm()">
+                        <label for="name">Full Name
+                        <input type="text" name="FullName" id="" placeholder="minimum 3 characters" [(ngModel)]="FullName" required minlength="3">
+                      </label>
+                        <label for="address">Address
+                        <input type="text" name="Address" id="" placeholder="minimum 6 characters" [(ngModel)]="Address" required minlength="6">
+                      </label>
+                        <label for="credit">Credit Number
+                        <input type="text" name="Credit" id="" placeholder="16 digits" [(ngModel)]="Credit" required  minlength="16">
+                      </label>
+                        <a routerLink="/order"> <button type="button" class="btn btn-primary" [disabled]="form.invalid">Submit</button></a>
+                    </form>
+                </blockquote>
+            </div>
+            <p id="Total">Total Price: ${{AllProductsTotal}}</p>
+        </div>
+    </div>
+</ng-container>
+
+
+
+
+
+<ng-container *ngIf="product.length ==0">
+    <div id="emptycard">
+        <div class="container">
+            <h1>Your Cart Is Empty!!</h1>
+            <a routerLink="/"><button  class="btn btn-primary">Shop now</button></a>
+        </div>
+    </div>
+</ng-container>

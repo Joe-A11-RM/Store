@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <blockquote class="col-lg-6">
+            <img id="img-container" src="{{singleProduct.url}}" alt="" width="250" height="350">
+        </blockquote>
+        <blockquote id="details" class="col-lg-6">
+            <p id="name">{{singleProduct.name}}</p>
+            <p>${{singleProduct.price}}</p>
+            <p>{{singleProduct.description}}</p>
+            <label for="price">Amount:</label>
+            <select id="price">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+              <option value="4">6</option>
+              <option value="4">7</option>
+              <option value="4">8</option>
+              <option value="4">9</option>
+              <option value="4">10</option>
+            </select>
+            <div>
+                <button routerLink="/cart" (click)="addtoCart(singleProduct)" class="btn btn-primary">Add to cart</button>
+            </div>
+            <a routerLink="/">
+                <p id="return">Back to home</p>
+            </a>
+        </blockquote>
+    </div>
+</div>

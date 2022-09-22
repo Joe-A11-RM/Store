@@ -1,0 +1,29 @@
+#footer {
+    padding-top: 25px;
+    background-color: #323232;
+    position: relative;
+    bottom: 0;
+    top: 25px;
+}
+
+dt {
+    font-size: 0.9em;
+    color: white;
+}
+
+dd {
+    color: white;
+    font-size: 0.75em;
+}
+
+dd:hover {
+    text-decoration: underline;
+}
+
+#copyright {
+    position: relative;
+    bottom: 10px;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}

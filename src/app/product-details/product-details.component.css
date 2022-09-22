@@ -1,0 +1,43 @@
+.container {
+    margin-top: 45px;
+}
+
+blockquote {
+    text-align: center;
+}
+
+#img-container {
+    border: 2px solid rgb(163, 163, 219);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#details {
+    text-align: left;
+    margin-top: 75px;
+}
+
+#name {
+    font-weight: bold;
+}
+
+select {
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+option {
+    text-align: center;
+}
+
+#price {
+    width: 20%;
+}
+
+button {
+    margin-top: 20px;
+}
+
+#return {
+    margin-top: 20px;
+}
