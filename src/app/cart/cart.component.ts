@@ -28,6 +28,7 @@ export class CartComponent implements OnInit {
 
   removeProduct(item:any){
     this.cart.removeCartData(item)
+    alert("Product removed from cart")
   }
   submitForm():void{
     const post = {

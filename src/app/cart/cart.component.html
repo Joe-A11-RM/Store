@@ -9,23 +9,52 @@
                     <p id="name">{{item.name}}</p>
                     <p>${{item.price}}</p>
                     <label for="quantity">Amount:
-                    <input type="number" id="quantity" name="quantity" min="1" max="10">
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
                   </label>
                     <button (click)="removeProduct(item)" type="button" class="btn btn-danger">Delete</button>
                 </blockquote>
                 <blockquote class="col-lg-4">
                     <form #form="ngForm" (ngSubmit)="submitForm()">
                         <label for="name">Full Name
-                        <input type="text" name="FullName" id="" placeholder="minimum 3 characters" [(ngModel)]="FullName" required minlength="3">
+                        <input type="text" name="FullName" id="" placeholder="minimum 3 characters"  required minlength="3" [(ngModel)]="FullName" #name="ngModel">
                       </label>
+                        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+
+                            <div *ngIf="name.errors?.['required']">
+                                Name is required.
+                            </div>
+                            <div *ngIf="name.errors?.['minlength']">
+                                Name must be at least 3 characters long.
+                            </div>
+                        </div>
+
                         <label for="address">Address
-                        <input type="text" name="Address" id="" placeholder="minimum 6 characters" [(ngModel)]="Address" required minlength="6">
+                        <input type="text" name="Address" id="" placeholder="minimum 6 characters" required minlength="6" [(ngModel)]="Address" #address="ngModel">
                       </label>
+                        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+
+                            <div *ngIf="name.errors?.['required']">
+                                Address is required.
+                            </div>
+                            <div *ngIf="name.errors?.['minlength']">
+                                Address must be at least 6 characters long.
+                            </div>
+                        </div>
                         <label for="credit">Credit Number
-                        <input type="text" name="Credit" id="" placeholder="16 digits" [(ngModel)]="Credit" required  minlength="16">
+                        <input type="text" name="Credit" id="" placeholder="16 digits" required  minlength="16" [(ngModel)]="Credit" #credit="ngModel">
                       </label>
+                        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+
+                            <div *ngIf="name.errors?.['required']">
+                                Credit Number is required.
+                            </div>
+                            <div *ngIf="name.errors?.['minlength']">
+                                Credit must be 16 digits long.
+                            </div>
+                        </div>
                         <a routerLink="/order"> <button type="button" class="btn btn-primary" [disabled]="form.invalid">Submit</button></a>
                     </form>
+
                 </blockquote>
             </div>
             <p id="Total">Total Price: ${{AllProductsTotal}}</p>

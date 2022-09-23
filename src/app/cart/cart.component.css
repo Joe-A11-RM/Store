@@ -38,3 +38,7 @@ input {
     margin-right: 150px;
     margin-bottom: 15px;
 }
+
+.alert {
+    color: red;
+}
