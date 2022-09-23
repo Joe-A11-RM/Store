@@ -8,7 +8,7 @@
             <p>${{singleProduct.price}}</p>
             <p>{{singleProduct.description}}</p>
             <label for="price">Amount:</label>
-            <select id="price">
+            <select id="price" [(ngModel)]="amount">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>

@@ -32,4 +32,5 @@ export class ProductDetailsComponent implements OnInit {
     this.Cart.addtoCart(item)
     alert("Product Added to cart")
   }
+
 }

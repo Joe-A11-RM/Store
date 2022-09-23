@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { ANIMATION_MODULE_TYPE, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
