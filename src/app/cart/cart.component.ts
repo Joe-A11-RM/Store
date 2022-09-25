@@ -39,4 +39,13 @@ export class CartComponent implements OnInit {
     this.FullName=''
     this.Address=''
   }
+  namechange(arg:any){
+    console.log("Name Change " + arg);
+  }
+  addresschange(arg:any){
+    console.log("Address Change " + arg);
+  }
+  creditchange(arg:any){
+    console.log("Credit Change " + arg);
+  }
 }

@@ -16,7 +16,7 @@
                 <blockquote class="col-lg-4">
                     <form #form="ngForm" (ngSubmit)="submitForm()">
                         <label for="name">Full Name
-                        <input type="text" name="FullName" id="" placeholder="minimum 3 characters"  required minlength="3" [(ngModel)]="FullName" #name="ngModel">
+                        <input type="text" name="FullName" id="" placeholder="minimum 3 characters"  required minlength="3" [(ngModel)]="FullName" (ngModelChange)="namechange($event)" #name="ngModel">
                       </label>
                         <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
 
@@ -29,7 +29,7 @@
                         </div>
 
                         <label for="address">Address
-                        <input type="text" name="Address" id="" placeholder="minimum 6 characters" required minlength="6" [(ngModel)]="Address" #address="ngModel">
+                        <input type="text" name="Address" id="" placeholder="minimum 6 characters" required minlength="6" [(ngModel)]="Address" (ngModelChange)="addresschange($event)" #address="ngModel">
                       </label>
                         <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
 
@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <label for="credit">Credit Number
-                        <input type="text" name="Credit" id="" placeholder="16 digits" required  minlength="16" [(ngModel)]="Credit" #credit="ngModel">
+                        <input type="text" name="Credit" id="" placeholder="16 digits" required  minlength="16" [(ngModel)]="Credit" (ngModelChange)="creditchange($event)" #credit="ngModel">
                       </label>
                         <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
 
